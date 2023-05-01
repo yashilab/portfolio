@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+const PortfolioApp = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />
 }
+
+export default PortfolioApp
