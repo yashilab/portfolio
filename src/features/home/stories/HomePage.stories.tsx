@@ -4,6 +4,9 @@ import HomePage from '../pages/HomePage'
 const meta: Meta<typeof HomePage> = {
   title: 'features/home/pages/HomePage',
   component: HomePage,
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 export default meta
