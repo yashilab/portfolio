@@ -33,6 +33,7 @@
     "eslint-config-next": "13.3.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-storybook": "^0.6.11",
+    "modern-css-reset": "^1.4.0",
     "prettier": "^2.8.7",
     "storybook": "^7.0.7"
   },
