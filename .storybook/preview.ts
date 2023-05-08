@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react'
+import 'modern-css-reset/dist/reset.min.css'
 
 const preview: Preview = {
   parameters: {
