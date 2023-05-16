@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 interface Props {
+  currentPage: string
   className?: string
 }
 
@@ -9,30 +10,44 @@ interface StyleProps {
   isOpen: boolean
 }
 
-const Component = ({ className }: Props) => {
+const pageList = [
+  {
+    name: 'home',
+    text: "' Home '",
+    uri: '/',
+  },
+  {
+    name: 'about',
+    text: "' About '",
+    uri: '/about',
+  },
+  {
+    name: 'blog',
+    text: "' Blog '",
+    uri: '/blog',
+  },
+  {
+    name: 'contact',
+    text: "' Contact '",
+    uri: '/contact',
+  },
+]
+
+const Component = ({ currentPage, className }: Props) => {
   return (
     <nav className={className}>
       <ul>
-        <li>
-          <Link href='/' className={`${className}-link`}>
-            &#39; Home &#39;
-          </Link>
-        </li>
-        <li>
-          <Link href='/' className={`${className}-link`}>
-            &#39; About &#39;
-          </Link>
-        </li>
-        <li>
-          <Link href='/' className={`${className}-link`}>
-            &#39; Blog &#39;
-          </Link>
-        </li>
-        <li>
-          <Link href='/' className={`${className}-link`}>
-            &#39; Contact &#39;
-          </Link>
-        </li>
+        {pageList.map((p, i) => (
+          <li key={i}>
+            {p.uri === currentPage ? (
+              <span className={`${className}-link--current`}>{p.text}</span>
+            ) : (
+              <Link href={`${p.uri}`} className={`${className}-link`}>
+                {p.text}
+              </Link>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
   )
@@ -78,6 +93,35 @@ const Nav = styled(Component)<StyleProps>`
 
     @media screen and (min-width: 701px) {
       font-size: 5vw;
+    }
+
+    &\--current {
+      font-family: 'shelby', sans-serif;
+      font-size: 10vw;
+      font-weight: 700;
+      font-style: normal;
+      line-height: 1.5;
+      color: #ffffff;
+      position: relative;
+
+      @media screen and (min-width: 701px) {
+        font-size: 5vw;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #ffffff;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (min-width: 701px) {
+          height: 2px;
+        }
+      }
     }
   }
 `

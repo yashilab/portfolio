@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import Menu from '../menu/Menu'
 
 interface Props {
+  currentPage: string
   className?: string
 }
 
-const Component = ({ className }: Props) => {
+const Component = ({ currentPage, className }: Props) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -15,7 +16,7 @@ const Component = ({ className }: Props) => {
 
   return (
     <header className={className}>
-      <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
+      <Menu isOpen={isOpen} toggleMenu={toggleMenu} currentPage={currentPage} />
     </header>
   )
 }
