@@ -1,17 +1,14 @@
 import styled from 'styled-components'
+import MainVisual from '../components/MainVisual'
 
-interface Props {
-  className?: string
+const Component = () => {
+  return (
+    <>
+      <MainVisual />
+    </>
+  )
 }
 
-const Component = ({ className }: Props) => {
-  return <main className={className}>Main</main>
-}
-
-const HomePage = styled(Component)`
-  & {
-    background: red;
-  }
-`
+const HomePage = styled(Component)``
 
 export default HomePage
