@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import HomeHeader from '../header/HomeHeader'
 
 type Props = PropsWithChildren & {
-  currentPage: string
   className?: string
 }
 
