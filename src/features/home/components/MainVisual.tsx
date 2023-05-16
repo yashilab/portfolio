@@ -2,6 +2,7 @@ import Gsap from 'gsap'
 import { TextPlugin } from 'gsap/dist/TextPlugin'
 import { useEffect } from 'react'
 import styled from 'styled-components'
+import { color } from '@/styles/theme'
 
 interface Props {
   className?: string
@@ -36,7 +37,7 @@ const MainVisual = styled(Component)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffffff;
+  background: ${color.base.white};
 
   &__text {
     width: 100%;
@@ -44,7 +45,7 @@ const MainVisual = styled(Component)`
     font-size: 20vw;
     font-weight: 700;
     font-style: normal;
-    color: #4169e1;
+    color: ${color.primary.light};
     text-align: center;
   }
 `

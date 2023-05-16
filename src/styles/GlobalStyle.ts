@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { color } from './theme'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -17,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: #000000;
+    color: ${color.text.black};
   }
 
   ul {

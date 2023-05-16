@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { color } from '@/styles/theme'
 
 interface Props {
   toggleMenu: () => void
@@ -30,8 +31,8 @@ const Hamburger = styled(Component)<StyleProps>`
     height: 1px;
     ${(props) =>
       props.isOpen
-        ? 'background-color: #ffffff;'
-        : 'background-color: #000000;'}
+        ? `background-color: ${color.base.white};`
+        : `background-color: ${color.base.black};`}
     position: absolute;
 
     &:nth-child(1) {

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import { color } from '@/styles/theme'
 
 interface Props {
   currentPage: string
@@ -64,7 +65,7 @@ const Nav = styled(Component)<StyleProps>`
   left: 0;
   padding: 5rem 0 0 0;
   overflow-y: auto;
-  background-color: #4169e1;
+  background-color: ${color.primary.light};
   ${(props) =>
     props.isOpen
       ? 'transform: translateX(0); transition: all 0.4s ease-out;'
@@ -89,7 +90,7 @@ const Nav = styled(Component)<StyleProps>`
     font-weight: 700;
     font-style: normal;
     line-height: 1.5;
-    color: #ffffff;
+    color: ${color.text.white};
 
     @media screen and (min-width: 701px) {
       font-size: 5vw;
@@ -101,7 +102,7 @@ const Nav = styled(Component)<StyleProps>`
       font-weight: 700;
       font-style: normal;
       line-height: 1.5;
-      color: #ffffff;
+      color: ${color.text.white};
       position: relative;
 
       @media screen and (min-width: 701px) {
@@ -114,7 +115,7 @@ const Nav = styled(Component)<StyleProps>`
         display: block;
         width: 100%;
         height: 1px;
-        background-color: #ffffff;
+        background-color: ${color.base.white};
         top: 50%;
         transform: translateY(-50%);
 
