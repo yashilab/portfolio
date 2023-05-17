@@ -8,25 +8,40 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@types/node": "18.15.12",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
+    "gsap": "^3.11.5",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "styled-components": "^5.3.10",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.7",
+    "@storybook/addon-interactions": "^7.0.7",
+    "@storybook/addon-links": "^7.0.7",
+    "@storybook/blocks": "^7.0.7",
+    "@storybook/nextjs": "^7.0.7",
+    "@storybook/react": "^7.0.7",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/styled-components": "^5.1.26",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-storybook": "^0.6.11",
+    "modern-css-reset": "^1.4.0",
+    "prettier": "^2.8.7",
+    "storybook": "^7.0.7"
   },
   "engines": {
     "node": "18.x",
     "npm": "9.x"
-  },
-  "devDependencies": {
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
-    "eslint-config-prettier": "^8.8.0",
-    "prettier": "^2.8.7"
   }
 }
