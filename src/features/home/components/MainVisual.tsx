@@ -37,7 +37,6 @@ const MainVisual = styled(Component)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${color.base.white};
 
   &__text {
     width: 100%;
